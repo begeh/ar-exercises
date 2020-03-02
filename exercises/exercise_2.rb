@@ -10,5 +10,4 @@ puts "----------"
 @store2 = Store.find_by(id: 2)
 puts "Store 1 is: #{@store1.inspect}"
 puts "Store 2 is: #{@store2.inspect}"
-@store1.name = "Vancouver"
-@store1.save
+@store1.update(name: "Vancouver Island")
