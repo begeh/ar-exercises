@@ -14,11 +14,11 @@ store6 = Store.create(name: "Yaletown", annual_revenue: 430000, mens_apparel: tr
 
 @mens_stores = Store.where(mens_apparel: true)
 @womens_stores = Store.where("womens_apparel = true AND annual_revenue < 1000000")
-puts "Men's Stores"
+pp "Men's Stores"
 for m in @mens_stores
-  pp m
+  pp "#{m.name} store has $#{m.annual_revenue} in revenue" 
 end
-puts "Women's Stores under 1 mil rev"
+pp "Women's Stores under 1 mil rev"
 for w in @womens_stores
-  pp w
+  pp "#{w.name} store has $#{w.annual_revenue} in revenue"
 end
